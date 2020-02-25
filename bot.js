@@ -21,7 +21,7 @@ const ytdl = require('ytdl-core');
 
 const app = express();
 app.get("/", (request, response) => {
-  console.log(Date.now() + "Fyukas 7/24 AKTİF TUTMA İŞLEMİ BAŞARILI");
+  console.log(Date.now() + "ArdaDemr | Youtube Channel");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -134,3 +134,172 @@ client.on('error', e => {
 client.login(ayarlar.token);
 
 //---------------------------------KOMUTLAR---------------------------------\\
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    // todo create channel
+    if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│2 Kişilik Oda')) {
+        newMember.guild.createChannel(`║👤 ${newMember.displayName}`, {
+            type: 'voice',
+            parent: newMember.voiceChannel.parent
+       }).then(cloneChannel => {
+        newMember.setVoiceChannel(cloneChannel)
+        cloneChannel.setUserLimit(2)
+      })
+    }
+    // ! leave
+    if (oldMember.voiceChannel != undefined) {
+        if (oldMember.voiceChannel.name.startsWith('║👤 ')) {
+            if (oldMember.voiceChannel.members.size == 0) {
+                oldMember.voiceChannel.delete()
+            }
+            else { // change name
+                let matchMember = oldMember.voiceChannel.members.find(x => `║👤 ${x.displayName}` == oldMember.voiceChannel.name);
+                if (matchMember == null) {
+                    oldMember.voiceChannel.setName(`║👤 ${oldMember.voiceChannel.members.random().displayName}`)
+                }
+            }
+        }
+    }
+});
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    // todo create channel
+    if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│3 Kişilik Oda')) {
+        newMember.guild.createChannel(`║👤 ${newMember.displayName}`, {
+            type: 'voice',
+            parent: newMember.voiceChannel.parent
+       }).then(cloneChannel => {
+        newMember.setVoiceChannel(cloneChannel)
+        cloneChannel.setUserLimit(3)
+      })
+    }
+    // ! leave
+    if (oldMember.voiceChannel != undefined) {
+        if (oldMember.voiceChannel.name.startsWith('║👤 ')) {
+            if (oldMember.voiceChannel.members.size == 0) {
+                oldMember.voiceChannel.delete()
+            }
+            else { // change name
+                let matchMember = oldMember.voiceChannel.members.find(x => `║👤 ${x.displayName}` == oldMember.voiceChannel.name);
+                if (matchMember == null) {
+                    oldMember.voiceChannel.setName(`║👤 ${oldMember.voiceChannel.members.random().displayName}`)
+                }
+            }
+        }
+    }
+});
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    // todo create channel
+    if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│4 Kişilik Oda')) {
+        newMember.guild.createChannel(`║👤 ${newMember.displayName}`, {
+            type: 'voice',
+            parent: newMember.voiceChannel.parent
+       }).then(cloneChannel => {
+        newMember.setVoiceChannel(cloneChannel)
+        cloneChannel.setUserLimit(4)
+      })
+    }
+    // ! leave
+    if (oldMember.voiceChannel != undefined) {
+        if (oldMember.voiceChannel.name.startsWith('║👤 ')) {
+            if (oldMember.voiceChannel.members.size == 0) {
+                oldMember.voiceChannel.delete()
+            }
+            else { // change name
+                let matchMember = oldMember.voiceChannel.members.find(x => `║👤 ${x.displayName}` == oldMember.voiceChannel.name);
+                if (matchMember == null) {
+                    oldMember.voiceChannel.setName(`║👤 ${oldMember.voiceChannel.members.random().displayName}`)
+                }
+            }
+        }
+    }
+});
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+    // todo create channel
+    if (newMember.voiceChannel != null && newMember.voiceChannel.name.startsWith('➕│5 Kişilik Oda')) {
+        newMember.guild.createChannel(`║👤 ${newMember.displayName}`, {
+            type: 'voice',
+            parent: newMember.voiceChannel.parent
+       }).then(cloneChannel => {
+        newMember.setVoiceChannel(cloneChannel)
+        cloneChannel.setUserLimit(5)
+      })
+    }
+    // ! leave
+    if (oldMember.voiceChannel != undefined) {
+        if (oldMember.voiceChannel.name.startsWith('║👤 ')) {
+            if (oldMember.voiceChannel.members.size == 0) {
+                oldMember.voiceChannel.delete()
+            }
+            else { // change name
+                let matchMember = oldMember.voiceChannel.members.find(x => `║👤 ${x.displayName}` == oldMember.voiceChannel.name);
+                if (matchMember == null) {
+                    oldMember.voiceChannel.setName(`║👤 ${oldMember.voiceChannel.members.random().displayName}`)
+                }
+            }
+        }
+    }
+});
+//----------------------------------GEÇİCİ KANAL----------------------------// 
+//----------------------------------Özel oda sistemi----------------------------// 
+client.on('message', async message => {
+  const ms = require('ms');
+  const prefix = await require('quick.db').fetch(`prefix_${message.guild.id}`) || ayarlar.prefix
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+  let u = message.mentions.users.first() || message.author;
+  if (command === "özelodasistemi") {
+  if (message.guild.channels.find(channel => channel.name === "Bot Kullanımı")) return message.channel.send(" Bot Paneli Zaten Ayarlanmış.")
+  if (!message.member.hasPermission('ADMINISTRATOR'))
+  return message.channel.send(" Bu Kodu `Yönetici` Yetkisi Olan Kişi Kullanabilir.");
+    message.channel.send(`Özel Oda Sisteminin Kurulmasını İstiyorsanız **Kur** Yazınız.`)
+      message.channel.awaitMessages(response => response.content === 'Kur', {
+        max: 1,
+        time: 10000,
+        errors: ['time'],
+     })
+    .then((collected) => {
+
+message.guild.createChannel('【🔐】2 Kişilik Odalar【🔐】', 'category', [{
+  id: message.guild.id,
+}]);
+
+message.guild.createChannel(`➕│2 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】2 Kişilik Odalar【🔐】")))
+
+message.guild.createChannel('【🔐】3 Kişilik Odalar【🔐】', 'category', [{
+  id: message.guild.id,
+}]);
+
+message.guild.createChannel(`➕│3 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】3 Kişilik Odalar【🔐】")))
+
+message.guild.createChannel('【🔐】4 Kişilik Odalar【🔐】', 'category', [{
+  id: message.guild.id,
+}]);
+
+message.guild.createChannel(`➕│4 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】4 Kişilik Odalar【🔐】")))
+
+message.guild.createChannel('【🔐】5 Kişilik Odalar【🔐】', 'category', [{
+  id: message.guild.id,
+}]);
+message.guild.createChannel(`➕│5 Kişilik Oda`, 'voice')
+.then(channel =>
+      channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】5 Kişilik Odalar【🔐】")))
+
+       message.channel.send("Gelişmiş Özel Oda Sistemi Aktif! **Youtube** https://youtube.com/ardademr")
+     
+            })   
+      
+}
+});
+//----------------------------------Özel oda sistemi Son----------------------------// 
