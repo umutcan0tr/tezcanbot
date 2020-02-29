@@ -21,7 +21,7 @@ const ytdl = require('ytdl-core');
 
 const app = express();
 app.get("/", (request, response) => {
-  console.log(Date.now() + "ArdaDemr | Youtube Channel");
+  console.log(Date.now() + "Lord Creative| Youtube Channel");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -296,7 +296,7 @@ message.guild.createChannel(`➕│5 Kişilik Oda`, 'voice')
 .then(channel =>
       channel.setParent(message.guild.channels.find(channel => channel.name === "【🔐】5 Kişilik Odalar【🔐】")))
 
-       message.channel.send("Gelişmiş Özel Oda Sistemi Aktif! **Youtube** https://youtube.com/ardademr")
+       message.channel.send("Gelişmiş Özel Oda Sistemi Aktif! ")
      
             })   
       
