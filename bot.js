@@ -21,7 +21,7 @@ const ytdl = require('ytdl-core');
 
 const app = express();
 app.get("/", (request, response) => {
-  console.log(Date.now() + "Lord Creative| Youtube Channel");
+  console.log(Date.now() + "Lord Creative | Youtube Channel");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -120,8 +120,8 @@ client.elevation = message => {
 
 var regToken = /[\w\d]{24}\.[\w\d]{6}\.[\w\d-_]{27}/g;
 // client.on('debug', e => {
-//   console.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
-// });
+//   l0RDconsole.log(chalk.bgBlue.green(e.replace(regToken, 'that was redacted')));
+// }); //DEVİLHOUSE//
 
 client.on('warn', e => {
     console.log(chalk.bgYellow(e.replace(regToken, 'that was redacted')));
