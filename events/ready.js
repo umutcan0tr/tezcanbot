@@ -29,3 +29,5 @@ var oyun = [
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Oyun ismi ayarlandı!`);
 };  
 //DEVİLHOUSE//
+
+//isteyen olursa oynuyor kısmını yayında olarak değiştirecek komudun linki sunucumuzdan alabilir!

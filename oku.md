@@ -1,13 +1,10 @@
-                            Lord Creative ALTYAPI
-Lord Creative  Youtube Kanalına Abone Olmayı Unutma <3
+                            Creative Developers
+ ・Discord  Sunucumuz : <https://discord.gg/Hm5Rj8w>
  
-Discord Botumuzun Destek Sunucusu: <https://discord.gg/BUHb9Hj>
-
-Sitemiz: <https://devilhouse.glitch.me>
+ ・ Kod Paylaşım Sunucumuz : <https://discord.gg/sCwrwzb> = 
  
-Kanala Gitmek İçin <https://www.youtube.com/channel/UCQoYeGiR5x6yHrLDu9garUw?view_as=subscriber>
-
-Çalınması Halinde Telif Attılacaktır
-
-
-                            Lord Creative ALTYAPI
+  **Altyapıları paylaşmak yasaktır! paylaşan olursa bana yazsın
+     Mösyö Dimitri#2107 veya Kuruculara Bildirsin** 
+     
+                            Creative Developers
+                            
