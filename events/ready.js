@@ -8,9 +8,9 @@ var prefix = ayarlar.prefix;
 
 module.exports = client => {
 var oyun = [
-        "-yardım | Komudu ile bütün komutları görebilirsiniz. | Devil House 🔥",
-        "-destek | Destek Sunucumuza Gelebilirsiniz | Devil House 🔥",
-        "YouTube Lord Creative | Devil House 🔥",
+        "-yardım | Komudu ile bütün komutları görebilirsiniz. | Creative Developers 🔥",
+        "-destek | Destek Sunucumuza Gelebilirsiniz | Creative Developers 🔥",
+        "YouTube Lord Creative | Creative Developers 🔥",
     ];
 
     setInterval(function() {
@@ -28,6 +28,6 @@ var oyun = [
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Şu an ` + client.channels.size + ` adet kanala, ` + client.guilds.size + ` adet sunucuya ve ` + client.guilds.reduce((a, b) => a + b.memberCount, 0).toLocaleString() + ` kullanıcıya hizmet veriliyor!`);
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] BOT: Oyun ismi ayarlandı!`);
 };  
-//DEVİLHOUSE//
+//Creative Developers//
 
-//isteyen olursa oynuyor kısmını yayında olarak değiştirecek komudun linki sunucumuzdan alabilir!
+//isteyen olursa oynuyor kısmını yayında olarak değiştirecek komudun linkini sunucumuzdan alabilir!
