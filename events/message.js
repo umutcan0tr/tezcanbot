@@ -10,14 +10,14 @@ module.exports = message => {
 	setTimeout(() => {
     talkedRecently.delete(message.author.id);
   }, 2500);
-  let client = message.client;
+  let client = message.client;//Lordcreative
   if (message.author.bot) return;
   if (!message.content.startsWith(ayarlar.prefix)) return;
   let command = message.content.split(' ')[0].slice(ayarlar.prefix.length);
   let params = message.content.split(' ').slice(1);
-  let perms = client.elevation(message);
+  let perms = client.elevation(message);//Lordcreative
   let cmd;
-  if (client.commands.has(command)) {
+  if (client.commands.has(command)) {//Lordcreative
     cmd = client.commands.get(command);
   } else if (client.aliases.has(command)) {
     cmd = client.commands.get(client.aliases.get(command));
@@ -37,7 +37,7 @@ module.exports = message => {
 			if (!message.member.hasPermission("MANAGE_MESSAGES")) {
 				const embed = new Discord.RichEmbed()
 					.setDescription(`Bu komutu kullanabilmek için **Mesajları Yönet** iznine sahip olmalısın!`)
-          .setColor("RED")
+          .setColor("RED")//fynx
 				message.channel.send({embed})
 				return
 			}
@@ -55,7 +55,7 @@ module.exports = message => {
 			if (!message.member.hasPermission("BAN_MEMBERS")) {
 				const embed = new Discord.RichEmbed()
 					.setDescription(`Bu komutu kullanabilmek için **Üyeleri Yasakla** iznine sahip olmalısın!`)
-					.setColor("RED")
+					.setColor("RED")//Lordcreative
 				message.channel.send({embed})
 				return
 			}
@@ -75,7 +75,7 @@ module.exports = message => {
 					.setDescription(`Bu komutu sadece **sahibim** kullanabilir!`)
 					.setColor("RED")
 				message.channel.send({embed})
-				return
+				return//Lordcreative
 			}
 		}
     if (perms < cmd.conf.permLevel) return;

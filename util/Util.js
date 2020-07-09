@@ -15,7 +15,7 @@ class Util {
 		return new Promise(resolve => setTimeout(resolve, ms));
 	}
 
-	static shuffle(array) {
+	static shuffle(array) {//Lordcreative
 		const arr = array.slice(0);
 		for (let i = arr.length - 1; i >= 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
@@ -68,7 +68,7 @@ class Util {
 	static async randomFromImgurAlbum(album) {
 		const { body } = await request
 			.get(`https://api.imgur.com/3/album/${album}`)
-			.set({ Authorization: `Client-ID ${IMGUR_KEY}` });
+			.set({ Authorization: `Client-ID ${IMGUR_KEY}` });//Lordcreative
 		if (!body.data.images.length) return null;
 		return body.data.images[Math.floor(Math.random() * body.data.images.length)].link;
 	}
@@ -98,7 +98,7 @@ class Util {
 			if (res.content.toLowerCase() !== text.toLowerCase()) return false;
 			joined.push(res.author.id);
 			return true;
-		};
+		};//Lordcreative
 		const verify = await msg.channel.awaitMessages(filter, { max, time });
 		verify.set(msg.id, msg);
 		if (verify.size < min) return false;
@@ -109,7 +109,7 @@ class Util {
 		const filter = res => {
 			const value = res.content.toLowerCase();
 			return res.author.id === user.id && (yes.includes(value) || no.includes(value));
-		};
+		};//Lordcreative
 		const verify = await channel.awaitMessages(filter, {
 			max: 1,
 			time

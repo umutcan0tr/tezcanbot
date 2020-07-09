@@ -1,10 +1,9 @@
-                            Creative Developers
- ・Discord  Sunucumuz : <https://discord.gg/Hm5Rj8w>
+                            Lord Creative ALTYAPI
+Lord Creative  Youtube Kanalına Abone Olmayı Unutma <3
  
- ・ Kod Paylaşım Sunucumuz : <https://discord.gg/sCwrwzb> = 
+Discord Botumuzun Destek Sunucusu: <https://discord.gg/BUHb9Hj>
  
-  **Altyapıları paylaşmak yasaktır! paylaşan olursa bana yazsın
-     Mösyö Dimitri#2107 veya Kuruculara Bildirsin** 
-     
-                            Creative Developers
-                            
+Kanala Gitmek İçin <https://www.youtube.com/channel/UCQoYeGiR5x6yHrLDu9garUw?view_as=subscriber>
+
+
+                            Lord Creative ALTYAPI
