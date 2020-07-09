@@ -137,7 +137,7 @@ client.login(ayarlar.token);
 
 
 client.on('guildMemberAdd', async member => {
-  await member.addRole(`KAYITSIZ ROL İD`) //id yazan yere verilecek rol (unregistered)
+  await member.addRole(`678266563777921034`) //id yazan yere verilecek rol (unregistered)
   await member.setNickname(`İsim | Yaş`) //yeni gelen kullanıcının adını değiştirme
 let member2 = member.user 
 let zaman = new Date().getTime() - member2.createdAt.getTime()
@@ -150,7 +150,7 @@ takizaman = `<a:tamam:717296560765141075> Güvenli`}require("moment-duration-for
  let zaman1 = new Date().getTime() - user.createdAt.getTime()
  const gecen = moment.duration(zaman1).format(` YY [Yıl,] DD [Gün,] HH [Saat,] mm [Dakika,] ss [Saniye]`) 
  let dbayarfalanfilan = await db.fetch(`takidbayar${member.guild.id}`)
- let message = member.guild.channels.find(x => x.id === `KANAL İD `) //id yazan kısma kanal id'si [orn: register-chat]
+ let message = member.guild.channels.find(x => x.id === `705494119895531714`) //id yazan kısma kanal id'si [orn: register-chat]
   const taki = new Discord.RichEmbed()
  .setTitle(
      "Fynx Topluluğuna Hoş Geldin"
