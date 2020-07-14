@@ -21,7 +21,7 @@ const ytdl = require('ytdl-core');
 
 const app = express();//Lordcreative
 app.get("/", (request, response) => {
-  console.log(Date.now() + "Lord Creative | Youtube Channel");
+  console.log(Date.now() + "Hatay E'sports By TezcanN");
   response.sendStatus(200);
 });
 app.listen(process.env.PORT);
@@ -137,7 +137,7 @@ client.login(ayarlar.token);
 
 
 client.on('guildMemberAdd', async member => {
-  await member.addRole(`678266563777921034`) //id yazan yere verilecek rol (unregistered)
+  await member.addRole(`722626472145321995`) //id yazan yere verilecek rol (unregistered)
   await member.setNickname(`İsim | Yaş`) //yeni gelen kullanıcının adını değiştirme
 let member2 = member.user 
 let zaman = new Date().getTime() - member2.createdAt.getTime()
@@ -163,7 +163,7 @@ takizaman = `<a:tamam:717296560765141075> Güvenli`}require("moment-duration-for
 
 <a:elms:698240537978994728>**・**<@&705459476358234134> **Rolündeki Yetkililer Seninle İlgilenecektir**
 
-<a:boost:692837267567542333>**・** **Sunucumuzun Sınırsız Davet Bağlantısı** https://discord.gg/Hfdu33H
+<a:boost:692837267567542333>**・** **Sunucumuzun Sınırsız Davet Bağlantısı** https://discord.gg/3YfsZhC
 
 
 <a:ntro:692828377899597826>**・** **Hesap Açılalı** ${gecen} **Olmuş**

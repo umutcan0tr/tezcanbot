@@ -9,10 +9,10 @@ module.exports = client => {
 }, 8000);
 client.user.setPresence({
         game: {
-            name: `YouTube Lord Creative`,
+            name: `Hatay E'sports`,
             type: 'WATCHING'   //WATCHING - İZLİYOR LISTINING - DİNLİYOR
         },
         status: 'online'   //online - Çevrimiçi idle - Boşta 
     })
-    console.log(`Lord Creative Kayıt Botu Hazır, Komutlar Yüklendi, Hizmete Hazırım.`);
+    console.log(`Hatay E'sports Kayıt Botu Hazır, Komutlar Yüklendi, Hizmete Hazırım.`);
 }

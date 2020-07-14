@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const db = require('quick.db');
 exports.run = (client, message, args) => {
-  const kayıtlı = message.guild.roles.find(r => r.id === "ÜYE ROL İD"); //buraya kayıtlı rolünüzün id'sini koyun
-  const misafir = message.guild.roles.find(r => r.id === "kayıtsız rol id"); //buraya misafir rolünüzün id'sini koyun.
-  const log = message.guild.channels.find(c => c.id === "kayıt log id"); //buraya kayıt log id koyun
-  const tag = "ZZ  ";
-  if(!message.member.roles.array().filter(r => r.id === "kayıt sorumlusu")[0]) { //buraya kayıt sorumlusu rolünün id'sini giriniz. SUNUCU AYARLARINDAN kopyalayın.
+  const kayıtlı = message.guild.roles.find(r => r.id === "725363705583501355"); //buraya kayıtlı rolünüzün id'sini koyun
+  const misafir = message.guild.roles.find(r => r.id === "722626472145321995"); //buraya misafir rolünüzün id'sini koyun.
+  const log = message.guild.channels.find(c => c.id === "725371731518423152"); //buraya kayıt log id koyun
+  const tag = "HES^";
+  if(!message.member.roles.array().filter(r => r.id === "732568695976755244")[0]) { //buraya kayıt sorumlusu rolünün id'sini giriniz. SUNUCU AYARLARINDAN kopyalayın.
     return message.channel.send("Bu işlemi sadece Ayarlanmış Kayıt Sorumluları gerçekleştirebilir.");
   } else {
     let member = message.mentions.users.first() || client.users.get(args.join(' '))
