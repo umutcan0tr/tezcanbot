@@ -138,7 +138,6 @@ client.login(ayarlar.token);
 
 client.on('guildMemberAdd', async member => {
   await member.addRole(`722626472145321995`) //id yazan yere verilecek rol (unregistered)
-  await member.setNickname(`İsim | Yaş`) //yeni gelen kullanıcının adını değiştirme
 let member2 = member.user 
 let zaman = new Date().getTime() - member2.createdAt.getTime()
 var user = member2 
